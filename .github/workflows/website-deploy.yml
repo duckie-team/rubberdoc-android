@@ -1,0 +1,75 @@
+name: website-deploy
+on:
+  pull_request:
+    branches: [ main ]
+    types: [ closed ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  website-deploy:
+    environment:
+      name: 'github-pages'
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: macos-latest
+
+    if: ${{
+      github.event.pull_request.merged &&
+      contains(github.event.pull_request.labels.*.name, 'documentation')
+      }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: zulu
+          java-version: 17
+
+      - name: Setup Gradle & Build Dokka
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-home-cache-cleanup: true
+          cache-write-only: false
+          cache-read-only: true
+          arguments: dokkaHtmlMultiModule --no-configuration-cache
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.0.0'
+          cache: 'npm'
+          cache-dependency-path: 'website/package-lock.json'
+
+      - name: Install npm packages
+        run: npm --prefix website install
+
+      - name: Build Docusaurus
+        run: npm run --prefix website build
+
+      - name: Create index.html file at website root
+        run: touch website/build/index.html
+
+      - name: Write index.html file
+        run: echo "<script type='text/javascript'> location.href = '/android'; </script>" > website/build/index.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'website/build'
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
