@@ -15,7 +15,7 @@ kotlin-detekt = "1.23.0"
 kotlin-ktlint-gradle = "11.4.2"
 kotlin-ktlint-source = "0.48.2"
 
-jackson-core = "2.14.2"
+jackson-core = "2.15.2"
 
 test-kotest = "5.6.2"
 test-junit-core = "4.13.2"
