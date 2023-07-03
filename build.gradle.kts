@@ -120,6 +120,6 @@ allprojects {
   }
 }
 
-tasks.register(name = "cleanAll", type = Delete::class) {
+tasks.register("cleanAll", type = Delete::class) {
   allprojects.map(Project::getBuildDir).forEach(::delete)
 }

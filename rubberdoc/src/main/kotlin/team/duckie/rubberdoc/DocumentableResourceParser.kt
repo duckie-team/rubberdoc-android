@@ -8,7 +8,7 @@
 @file:Suppress("unused", "DEPRECATION")
 @file:OptIn(ExperimentalCompilerApi::class)
 
-package team.duckie.rubberdoc.android
+package team.duckie.rubberdoc
 
 import com.google.auto.service.AutoService
 import org.jetbrains.kotlin.backend.common.extensions.IrGenerationExtension

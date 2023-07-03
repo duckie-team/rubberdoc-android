@@ -5,7 +5,7 @@
  * Please see full license: https://github.com/duckie-team/rubberdoc-android/blob/main/LICENSE
  */
 
-package team.duckie.rubberdoc.android
+package team.duckie.rubberdoc
 
 import org.jetbrains.kotlin.backend.common.extensions.IrGenerationExtension
 import org.jetbrains.kotlin.backend.common.extensions.IrPluginContext
