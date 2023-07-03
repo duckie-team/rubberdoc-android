@@ -21,7 +21,6 @@ import org.jetbrains.kotlin.config.CompilerConfiguration
 @AutoService(ComponentRegistrar::class)
 class DocumentableResourceParser : ComponentRegistrar {
   override val supportsK2 = false
-
   override fun registerProjectComponents(
     project: MockProject,
     configuration: CompilerConfiguration,

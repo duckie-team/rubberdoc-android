@@ -5,7 +5,7 @@
  * Please see full license: https://github.com/duckie-team/rubberdoc-android/blob/main/LICENSE
  */
 
-package team.duckie.rubberdoc.android
+package team.duckie.rubberdoc.material
 
 public enum class RubberdocType {
   Icon,

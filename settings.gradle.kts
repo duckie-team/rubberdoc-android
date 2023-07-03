@@ -30,5 +30,7 @@ buildCache {
 
 include(
   "rubberdoc",
+  "rubberdoc-json",
   "rubberdoc-material",
+  "utils",
 )
