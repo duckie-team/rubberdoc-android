@@ -8,7 +8,7 @@
 @file:Suppress("unused", "DEPRECATION")
 @file:OptIn(ExperimentalCompilerApi::class)
 
-package team.duckie.rubberdoc
+package team.duckie.rubberdoc.android
 
 import com.google.auto.service.AutoService
 import org.jetbrains.kotlin.backend.common.extensions.IrGenerationExtension
@@ -21,7 +21,6 @@ import org.jetbrains.kotlin.config.CompilerConfiguration
 @AutoService(ComponentRegistrar::class)
 class DocumentableResourceParser : ComponentRegistrar {
   override val supportsK2 = false
-
   override fun registerProjectComponents(
     project: MockProject,
     configuration: CompilerConfiguration,
