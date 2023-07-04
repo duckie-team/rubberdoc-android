@@ -1,0 +1,47 @@
+import ColorBox from '@site/src/components/ColorBox';
+
+# QuackColor
+
+```markdown
+# QuackColor class name
+
+[class signature]
+
+description
+
+## Constructor
+
+| Field name | Description |
+|:----------:|:-----------:|
+|     -      |      -      |
+
+## Colors
+
+| Name |                           Preview                           |
+|:----:|:-----------------------------------------------------------:|
+| name | <ColorBox width="100px" height="50px" color="color value"/> |
+```
+
+# QuackColor
+
+```kotlin
+@Immutable
+@JvmInline
+public value class QuackColor(public val value: Color)
+```
+
+덕키에서 사용할 색상을 정의합니다. 색상 정의는 코드 스타일 통일을 위해 ARGB 형식이 아닌 Hex 형식으로 해야 합니다.
+
+## Constructor
+
+| Field name |                 Description                 |
+|:----------:|:-------------------------------------------:|
+|  `value`   | 색상 값. 이 인자로 색상을 사용하기 위해 컴포즈의 `Color`로 받습니다. |
+
+## Colors
+
+|      Name      |                         Preview                         |
+|:--------------:|:-------------------------------------------------------:|
+| `DuckieOrange` | <ColorBox width="100px" height="50px" color="#FF8300"/> |
+|    `Gray1`     | <ColorBox width="100px" height="50px" color="#666666"/> |
+|    `Black`     | <ColorBox width="100px" height="50px" color="#222222"/> |

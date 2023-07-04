@@ -15,7 +15,7 @@ const config = {
   baseUrl: '/android/',
   favicon: 'images/logo.ico',
   onBrokenMarkdownLinks: 'throw',
-  tagline: 'Meticulous Documentation Engine for rubberdoc',
+  tagline: 'Meticulous Documentation Engine for QuackQuack',
   presets: [
     [
       '@docusaurus/preset-classic',
