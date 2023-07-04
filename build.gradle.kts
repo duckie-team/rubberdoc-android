@@ -20,9 +20,9 @@ plugins {
   idea
 }
 
-/*tasks.dokkaHtmlMultiModule {
+tasks.dokkaHtmlMultiModule {
   outputDirectory.set(file("website/static/api"))
-}*/
+}
 
 // TODO
 /*
