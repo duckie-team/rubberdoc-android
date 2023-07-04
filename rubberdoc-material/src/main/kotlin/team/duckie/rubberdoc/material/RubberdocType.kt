@@ -7,5 +7,9 @@
 
 package team.duckie.rubberdoc.material
 
-@DslMarker
-public annotation class RubberdocDsl
+public enum class RubberdocType {
+  Auto,
+  Color,
+  Typography,
+  Icon,
+}

@@ -5,8 +5,6 @@
  * Please see full license: https://github.com/duckie-team/rubberdoc-android/blob/main/LICENSE
  */
 
-@file:Suppress("DSL_SCOPE_VIOLATION", "INLINE_FROM_HIGHER_PLATFORM")
-
 plugins {
   rubberdoc("jvm-kotlin")
   // rubberdoc("rubberdoc-publishing")
@@ -17,7 +15,7 @@ dependencies {
   compileOnly(libs.kotlin.embeddable.compiler)
   implementations(
     libs.google.autoservice.annotation,
-    // projects.utilBackendKotlinc,
+    libs.quackquack.util.backend.kotlinc,
   )
   ksp(libs.google.autoservice.ksp.processor)
 }

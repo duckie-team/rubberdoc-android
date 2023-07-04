@@ -14,10 +14,11 @@ import org.jetbrains.kotlin.ir.declarations.IrModuleFragment
 import org.jetbrains.kotlin.ir.declarations.IrSimpleFunction
 import org.jetbrains.kotlin.ir.declarations.IrTypeAlias
 import org.jetbrains.kotlin.ir.visitors.IrElementVisitorVoid
+import team.duckie.quackquack.util.backend.kotlinc.Logger
 
 internal class DRPIrVisitor(
   @Suppress("unused") private val context: IrPluginContext,
-  // private val logger: Logger,
+  @Suppress("UnusedPrivateProperty") private val logger: Logger,
 ) : IrElementVisitorVoid {
   override fun visitModuleFragment(declaration: IrModuleFragment) {
     declaration.files.forEach { file ->
