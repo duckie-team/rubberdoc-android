@@ -1,0 +1,1 @@
+`DR` stands for `DocumentableResource`.

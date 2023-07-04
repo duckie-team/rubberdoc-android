@@ -5,6 +5,10 @@
  * Please see full license: https://github.com/duckie-team/rubberdoc-android/blob/main/LICENSE
  */
 
-package team.duckie.rubberdoc.material
+package team.duckie.rubberdoc.node.base
 
-// TODO
+import team.duckie.rubberdoc.node.signature.Signature
+
+public interface DRChild {
+  public val signature: Signature
+}
