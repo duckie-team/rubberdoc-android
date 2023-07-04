@@ -1,0 +1,1 @@
+`cls` stands for `class`.
