@@ -9,6 +9,15 @@
 const sidebars = {
   docs: [
     'introduction',
+    {
+      type: 'category',
+      label: 'Guides',
+      link: {
+        type: 'doc',
+        id: 'guides/documentation-style',
+      },
+      items: ['guides/toplevel-property'],
+    },
     'development',
     'architecture',
     'modularization',
