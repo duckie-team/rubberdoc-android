@@ -17,6 +17,7 @@ import org.jetbrains.kotlin.com.intellij.openapi.extensions.LoadingOrder
 import org.jetbrains.kotlin.compiler.plugin.ComponentRegistrar
 import org.jetbrains.kotlin.compiler.plugin.ExperimentalCompilerApi
 import org.jetbrains.kotlin.config.CompilerConfiguration
+import team.duckie.quackquack.util.backend.kotlinc.getLogger
 
 @AutoService(ComponentRegistrar::class)
 class DocumentableResourceParser : ComponentRegistrar {
@@ -28,7 +29,7 @@ class DocumentableResourceParser : ComponentRegistrar {
     project.extensionArea
       .getExtensionPoint(IrGenerationExtension.extensionPointName)
       .registerExtension(
-        DRPIrExtension(/*configuration.getLogger(tag = "rubberdoc")*/),
+        DRPIrExtension(configuration.getLogger(tag = "rubberdoc")),
         LoadingOrder.FIRST,
         project,
       )

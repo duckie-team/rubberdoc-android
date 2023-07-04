@@ -15,7 +15,6 @@ plugins {
 dependencies {
   implementations(
     libs.jackson.databind,
-    projects.rubberdocMaterial,
     projects.utils,
   )
 }

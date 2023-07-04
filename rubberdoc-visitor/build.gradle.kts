@@ -7,15 +7,13 @@
 
 plugins {
   rubberdoc("jvm-kotlin")
+  rubberdoc("kotlin-explicit-api")
   // rubberdoc("rubberdoc-publishing")
-  alias(libs.plugins.kotlin.ksp)
 }
 
 dependencies {
-  compileOnly(libs.kotlin.embeddable.compiler)
   implementations(
-    libs.google.autoservice.annotation,
+    libs.kotlin.embeddable.compiler,
     libs.quackquack.util.backend.kotlinc,
   )
-  ksp(libs.google.autoservice.ksp.processor)
 }

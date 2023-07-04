@@ -9,7 +9,6 @@ package team.duckie.rubberdoc.json
 
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
-import team.duckie.rubberdoc.material.RubberdocDsl
 import team.duckie.rubberdoc.utils.fastForEach
 
 private val jsonMapper =

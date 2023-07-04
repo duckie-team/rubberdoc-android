@@ -10,11 +10,11 @@ package team.duckie.rubberdoc.android
 import org.jetbrains.kotlin.backend.common.extensions.IrGenerationExtension
 import org.jetbrains.kotlin.backend.common.extensions.IrPluginContext
 import org.jetbrains.kotlin.ir.declarations.IrModuleFragment
+import team.duckie.quackquack.util.backend.kotlinc.Logger
 
-@Suppress("EmptyDefaultConstructor")
-internal class DRPIrExtension(/*private val logger: Logger*/) : IrGenerationExtension {
+internal class DRPIrExtension(private val logger: Logger) : IrGenerationExtension {
   override fun generate(moduleFragment: IrModuleFragment, pluginContext: IrPluginContext) {
-    val visitor = DRPIrVisitor(context = pluginContext/*, logger = logger*/)
+    val visitor = DRPIrVisitor(context = pluginContext, logger = logger)
     moduleFragment.accept(visitor, null)
   }
 }

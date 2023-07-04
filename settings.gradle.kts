@@ -32,5 +32,8 @@ include(
   "rubberdoc",
   "rubberdoc-json",
   "rubberdoc-material",
+  "rubberdoc-node",
+  "rubberdoc-visitor",
+  "rubberdoc-render",
   "utils",
 )

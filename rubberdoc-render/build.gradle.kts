@@ -5,7 +5,8 @@
  * Please see full license: https://github.com/duckie-team/rubberdoc-android/blob/main/LICENSE
  */
 
-package team.duckie.rubberdoc.material
-
-@DslMarker
-public annotation class RubberdocDsl
+plugins {
+  rubberdoc("jvm-kotlin")
+  rubberdoc("kotlin-explicit-api")
+  // rubberdoc("rubberdoc-publishing")
+}
