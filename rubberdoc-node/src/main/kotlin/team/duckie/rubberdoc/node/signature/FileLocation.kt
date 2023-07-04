@@ -7,8 +7,9 @@
 
 package team.duckie.rubberdoc.node.signature
 
-public data class FileOffset(
-  public val line: Int,
-  public val column: Int,
-  public val offset: Int,
+public data class FileLocation(
+  public val startLine: Int,
+  public val startColumn: Int,
+  public val endLine: Int,
+  public val endColumn: Int,
 )

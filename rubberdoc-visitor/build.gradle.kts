@@ -13,7 +13,10 @@ plugins {
 
 dependencies {
   implementations(
+    libs.kotlin.kotlinpoet.core,
     libs.kotlin.embeddable.compiler,
     libs.quackquack.util.backend.kotlinc,
+    projects.rubberdocNode,
+    projects.utils,
   )
 }

@@ -7,21 +7,18 @@
 
 package team.duckie.rubberdoc.node.signature
 
+import com.squareup.kotlinpoet.AnnotationSpec
+import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.KModifier
-import java.nio.file.Path
+import java.io.File
 
 public data class Signature(
   public val name: String,
-  public val annotations: List<Annotation>,
+  public val annotations: List<AnnotationSpec>,
   public val modifiers: List<KModifier>,
-  public val arguments: List<Signature>,
-  public val returnType: Class<*>,
+  public val arguments: List<Signature>?,
+  public val returnType: ClassName?,
   public val description: String,
-  public val filePath: Path,
-  public val fileOffset: FileOffset,
+  public val containingFile: File?,
+  public val fileLocation: FileLocation,
 )
-
-@Suppress("UnusedReceiverParameter", "UNUSED_PARAMETER")
-public fun Signature.toSpec(withConstructor: Boolean) {
-  throw NotImplementedError()
-}
