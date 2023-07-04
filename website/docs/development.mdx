@@ -1,0 +1,25 @@
+# Development
+
+... 작성 중
+
+## BOM Download ![](https://img.shields.io/maven-central/v/team.duckie.rubberdoc.bom/bom?style=flat-square) {#bom}
+
+러버독은 MavenCentral 저장소에 배포됩니다.
+
+```kotlin
+implementation(platform("team.duckie.rubberdoc.bom:bom:${version}"))
+```
+
+이용 가능한 모든 아티팩트는 [maven central repository](https://central.sonatype.com/search?q=team.duckie.rubberdoc)에서 확인하실 수 있습니다.
+
+#### Snapshot
+
+개발 중 버전은 [snapshot 저장소](https://s01.oss.sonatype.org/content/repositories/snapshots/team/duckie/rubberdoc/)에 배포됩니다.
+
+```kotlin
+repositories {
+  maven("https://s01.oss.sonatype.org/content/repositories/snapshots/") {
+    mavenContent { snapshotsOnly() }
+  }
+}
+```
