@@ -14,3 +14,7 @@ public annotation class Rubberdoc(
   public val description: String,
   public val type: RubberdocType = RubberdocType.Auto,
 )
+
+@Target(AnnotationTarget.LOCAL_VARIABLE)
+@Retention(AnnotationRetention.SOURCE)
+public annotation class RubberdocColor(public val color: Long)
