@@ -12,7 +12,7 @@ kotlin-dokka = "1.9.0"
 kotlin-ksp = "1.9.10-1.0.13"
 kotlin-kotlinpoet = "1.14.2"
 kotlin-detekt = "1.23.1"
-kotlin-ktlint-gradle = "11.6.0"
+kotlin-ktlint-gradle = "11.6.1"
 kotlin-ktlint-source = "0.48.2"
 
 jackson-core = "2.15.2"
