@@ -1,5 +1,5 @@
 [versions]
-gradle-publish-maven = "0.25.3"
+gradle-publish-maven = "0.26.0"
 gradle-dependency-graph = "1.1.0"
 gradle-dependency-handler-extensions = "1.1.0"
 
