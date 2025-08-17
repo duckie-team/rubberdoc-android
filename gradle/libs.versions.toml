@@ -4,7 +4,7 @@ gradle-dependency-graph = "1.1.0"
 gradle-dependency-handler-extensions = "1.1.0"
 
 google-autoservice-standard = "1.1.1"
-google-autoservice-ksp = "1.1.0"
+google-autoservice-ksp = "1.2.0"
 
 kotlin-core = "1.9.25"
 kotlin-coroutines = "1.10.2"
