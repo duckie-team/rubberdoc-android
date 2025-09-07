@@ -15,7 +15,7 @@ kotlin-detekt = "1.23.8"
 kotlin-ktlint-gradle = "11.6.1"
 kotlin-ktlint-source = "0.48.2"
 
-jackson-core = "2.19.2"
+jackson-core = "2.20.0"
 quackquack-util-backend-kotlinc = "2.0.0-alpha02"
 
 test-kotest = "5.9.1"
